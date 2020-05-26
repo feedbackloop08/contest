@@ -1,38 +1,356 @@
-.App {
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f5f8fa;
+  height: 70px;
+  font-size: 18px;
+  padding: 0 100px 0 100px;
+}
+.appbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 0 100px 0 100px;
+  font-weight: 600;
+  background-color: #fff;
+  z-index: 1;
+  box-shadow: 1px 2px 5px #bebebe;
+}
+.appTitle {
+  font-size: 28px;
+  line-height: 28px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.navigation > * {
+  margin-left: 50px;
+}
+
+.mobileNav {
+  display: none;
+}
+.link {
+  cursor: pointer;
+}
+
+.searchIcon {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.functions {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.functions > * {
+  margin-left: 30px;
+}
+
+button {
+  height: 35px;
+  border: 0;
+  font-size: 14px;
+  padding: 10px 30px;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 2px;
+  background-color: #ff7a59;
+  cursor: pointer;
+}
+
+.covidInfo {
+  background-color: #425b76;
+  font-size: 18px;
+  color: #fff;
+  padding: 10px 100px 10px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.description {
+  display: flex;
+  background-color: #fff3ee;
+  padding-top: 50px;
+}
+
+.info {
+  position: absolute;
+  max-width: 350px;
+  padding-left: 100px;
+  padding-bottom: 50px;
+}
+.info > .header {
+  font-size: 36px;
+}
+p {
+  font-size: 18px;
+}
+.info > button {
+  width: 230px;
+  height: 80px;
+  font-size: 18px;
+}
+
+.heroes {
+  flex: 1;
+}
+
+.heroMobile {
+  display: none;
+}
+.services {
+  display: flex;
+  padding: 50px 100px 100px 100px;
+  min-height: 450px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #f5f8fa;
+}
+
+.services > * {
+  flex-basis: 400px;
+  margin: 10px;
+  align-content: flex-start;
+}
+
+.tag {
+  height: 450px;
+  padding: 10px;
+}
+
+.card {
+  height: auto;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 2px 2px 5px #efefef;
+  border-radius: 2px;
+  align-content: center;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 1px 3px 25px #dadada;
+}
+
+.cardTitle,
+.cardSubtitle {
+  margin: 30px 5px;
+}
+
+.card > button {
+  width: 100%;
+  font-size: 18px;
+}
+
+.divider {
+  margin: 30px 5px;
+}
+
+.cardContent {
+  margin-left: 10px;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.features {
+  display: flex;
+  align-items: center;
+}
+
+.analytics {
+  display: flex;
+  padding: 10px 100px 10px 100px;
+  flex-direction: column;
+  background-color: #00adb4;
+  color: #fff;
+  align-items: center;
+}
+
+.numbers {
+  display: flex;
+  flex-wrap: wrap;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.num {
+  font-size: 32px;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.desc {
+  font-size: 16px;
+}
+.numberContainer {
+  flex-basis: 25%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.survey {
   display: flex;
+  padding: 50px 100px 10px 100px;
   flex-direction: column;
-  align-items: center;
+}
+
+.data {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.welcome {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.surveys {
+  max-width: 700px;
+  max-height: 250px;
+}
+
+.surveyMobile {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+
+.welcome > * {
+  flex-basis: 50%;
+}
+
+.smile {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.smile > img {
+  max-width: 300px;
+  max-height: 300px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 600px) {
+  .numberContainer {
+    flex-basis: 100%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .surveyMobile {
+    display: flex;
+  }
+  .surveys {
+    display: none;
+  }
+}
+@media screen and (max-width: 850px) {
+  p {
+    font-size: 14px;
+  }
+  .topbar,
+  .navigation,
+  .heroes {
+    display: none;
+  }
+  .mobileNav {
+    display: flex;
+    padding: 0 15px;
+  }
+  .appbar {
+    padding: 0 10px;
+    position: fixed;
+    width: 100%;
+  }
+  .covidInfo {
+    padding: 10px;
+    padding-top: 70px;
+  }
+  .description {
+    flex-direction: column;
+  }
+  .info > .header,
+  .analytics > .h2 {
+    font-size: 24px;
+  }
+  .info {
+    max-width: 100%;
+    padding: 10px 20px;
+    position: relative;
+    text-align: center;
+  }
+  .info > button {
+    width: 100%;
+  }
+  .heroMobile {
+    display: flex;
+  }
+  .services {
+    padding: 0 20px 0 20px;
+  }
+  .services > * {
+    flex-basis: 100%;
+  }
+  .tag {
+    height: auto;
+  }
+  .features,
+  .cardSubtitle {
+    font-size: 14px;
+  }
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+  .analytics,
+  .survey {
+    padding: 10px 20px;
+  }
+  .numberContainer {
+    flex-basis: 50%;
+  }
+}
+
+@media screen and (min-width: 851px) and (max-width: 1098px) {
+  .services > * {
+    flex-basis: 280px;
+  }
+  .heroes {
+    max-height: 50%;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .survey > * {
+    flex-direction: column;
+  }
+  .survey > * {
+    text-align: center;
+  }
+  .welcome {
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .description {
+    flex-direction: column;
+  }
+  .info {
+    max-width: 100%;
+    padding: 10px 20px;
+    position: relative;
+    text-align: center;
+  }
+  .heroes {
+    width: 100%;
   }
 }
